@@ -9,7 +9,7 @@ namespace CRUD_App_Using_ADO.Models
 {
     public class Employee
     {
-        [Required]
+        [Required] 
         public int ID { get; set; }
         [Required]
         public string Fname { get; set; }

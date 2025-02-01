@@ -57,7 +57,7 @@ namespace CRUD_App_Using_ADO.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(int ID, Employee emp)
+        public ActionResult Edit( Employee emp)
         {
 
             try
@@ -81,6 +81,28 @@ namespace CRUD_App_Using_ADO.Controllers
             {
                 return View();
             }
+
+        }
+        public ActionResult Delete(int ID)
+        {
+            EmployeeDBContext Context = new EmployeeDBContext();
+            var row = Context.GetEmployees().Find(model => model.ID == ID);
+
+            return View(row);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(int ID, Employee emp)
+        {
+
+            EmployeeDBContext Context = new EmployeeDBContext();
+            bool Check = Context.DeleteEmployee(ID);
+            if (Check == true)
+            {
+                TempData["DeleteMessage"] = "Data has been Deleted Successfuly.";
+                return RedirectToAction("Index");
+            }
+            return View();
 
         }
     }

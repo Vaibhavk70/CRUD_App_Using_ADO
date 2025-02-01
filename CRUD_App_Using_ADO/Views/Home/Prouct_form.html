@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title> Shree Store</title>
+    <link href="./Product.css" rel="stylesheet" />
+</head>
+<body style="text-align: center">
+    <div style="width: 100%; ">
+        <h1 style="background-color: olivedrab; margin-bottom: 0.5%">Product Information</h1>
+        <p style="text-align: right; ">Source Code <sup>[<a title="GitHub Link" href="https://github.com/Vaibhavk70/SQL_ADO_DataTable" target="_blank">Link</a>]</sup> <br /> Contact: <a href="mailto:vaibhavkharat10@gmail.com?">Email</a></p>
+            <!--<button type="button" onclick="MY_Data()" style="float:left">Data List!</button>
+
+            <p id="demo" style="text-align : center">Here is your Data..!.</p>
+
+            <script>
+                function MY_Data() {
+                    document.getElementById("demo").innerHTML = "Hello User!";
+                }
+            </script>-->
+        <hr />
+        <p style="background-color: lightblue;">Add new product for store.</p>
+
+    </div>
+    <div class="form_container">
+        <form action="/" method="post">
+            <div>
+                <label class="form-group" ; for="P_ID">Product ID: </label>
+                <input type="text" id="P_ID" value="" /><br />
+            </div>
+            <div>
+                <label for="P_Name">Product Name:</label>
+                <input type="text" value="" /><br />
+            </div>
+            <div>
+                <label for="P_Category">Product Category: </label>
+                <input type="text" id="P_ID" value="" /><br />
+            </div>
+            <div>
+                <!--Checkbox-->
+
+                <label>Product Type:</label>
+                <input type="checkbox" id="good" name="product_type" value="Good">
+                <label for="good">Good</label>
+
+                <input type="checkbox" id="fresh" name="product_type" value="Fresh">
+                <label for="fresh">Fresh</label>
+
+                <input type="checkbox" id="not_good" name="product_type" value="Not Good for Use">
+                <label for="not_good">Not good for use</label><br />
+                <!--check-->
+            </div>
+            <div class=" inline-group">
+                <div>
+                    <label for="P_Price">Product Price: </label>
+                    <input type="text" id="P_Price" value="" /><br />
+                </div>
+                <div>
+                    <label for="P_MRP">Product MRP: </label>
+                    <input type="text" value="" /><br />
+                </div>
+            </div>
+            <div>
+                <label style="text-align: left" for="P_Discription"> Product Description: </label><br />
+                <textarea style="width : 100%"; id="product-description" rows="3"></textarea>
+                <br />
+            </div>
+            <div class="inline-group">
+                <div>
+                    <label for="Mail"> Cutomer Mail: </label>
+                    <input  type="text" value="" />
+                </div>
+                <div>
+                    <label for="Phone"> Customer Phone: </label>
+                    <input style="width : auto"; type="text" value="" /><br />
+                </div>
+            </div>
+            
+            <button class="submit-btn">Submit</button>
+
+        </form>
+       
+    </div>
+
+    <div>
+        <hr />
+        <p style="background-color: lightblue;">Here! You can get all product information</p>
+
+        <table style="text-align : center; width:100%">
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Product Category</th>
+                <th>Product Type</th>
+                <th>Product Price</th>
+                <th>Product MRP</th>
+                <th>Product Description</th>
+                <th>Customer Mail</th>
+                <th>Custemer Phone</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Dell</td>
+                <td>Laptop</td>
+                <td>Gaming</td>
+                <td>80000</td>
+                <td>90000</td>
+                <td>Dell G15-5530 Windows 11 Home, Intel Core i5-13450HX| NVIDIA RTX 3050, 6GB|8GB RAM|512GB SSD, FHD|Window 11|Ms Office' 21|15.6" (39.62Cm)|Dark Shadow Grey|2.65Kg|Gaming Laptop</td>
+                <td>ABC@gmail.com</td>
+                <td>123456</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+
+
+
+<!--
+    Atrributes :
+    - Atrributes is nothing but it is define inside the tag like; 'href' in ancore tag and 'scr' in image tag.
+    - Image Atrribute, In image we give scr as a source of the image and 'alt' is for the if we get any error in the 'scr' will display the 'alt'.
+    - Title atrribute os for when we take cursor on it will display the tital message which we have dfine before to display
+
+-->
